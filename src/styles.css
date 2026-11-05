@@ -1,0 +1,167 @@
+@import "tailwindcss";
+@import "@fontsource/be-vietnam-pro/latin-400.css";
+@import "@fontsource/be-vietnam-pro/latin-500.css";
+@import "@fontsource/be-vietnam-pro/latin-600.css";
+@import "@fontsource/be-vietnam-pro/latin-700.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-400.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-500.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-600.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-700.css";
+
+@theme {
+  --font-sans: "Be Vietnam Pro", "Noto Sans", system-ui, sans-serif;
+  --color-ink: #071018;
+  --color-navy: #102033;
+  --color-navy-2: #173049;
+  --color-line: #2a4158;
+  --color-gold: #c6a15b;
+  --color-gold-2: #e6d3a1;
+  --color-ivory: #f4ead7;
+  --color-muted: #93a6b8;
+  --color-cinnabar: #c4564a;
+  --color-pine: #3e9a68;
+  --color-kim: #c9c3b6;
+  --color-moc: #2f6b45;
+  --color-thuy: #24577d;
+  --color-hoa: #8d3a34;
+  --color-tho: #9a7438;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+  }
+  html, body {
+    background: var(--color-ink);
+    color: var(--color-ivory);
+    font-family: var(--font-sans);
+    height: 100%;
+  }
+  body {
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    overscroll-behavior: none;
+  }
+  input, textarea {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  button:focus-visible, a:focus-visible, input:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}
+
+@layer components {
+  .app-shell {
+    display: flex;
+    height: 100dvh;
+    max-height: 100dvh;
+    flex-direction: column;
+    overflow: hidden;
+    background:
+      radial-gradient(120% 70% at 50% -10%, #173049 0%, var(--color-ink) 55%);
+  }
+  .app-pad {
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
+  }
+  .stage {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 0.5rem 0.5rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0 1px var(--color-gold);
+    padding-bottom: max(0.25rem, env(safe-area-inset-bottom));
+  }
+  .bezel {
+    box-shadow: inset 0 0 0 1px var(--color-gold);
+  }
+  .mode-btn {
+    min-height: 2.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-line);
+    background: var(--color-navy);
+    color: var(--color-ivory);
+    font-size: 0.875rem;
+    line-height: 1.2;
+    padding: 0.25rem 0.6rem;
+  }
+  .mode-on {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    background: var(--color-navy-2);
+  }
+  .icon-btn {
+    display: inline-flex;
+    height: 2.75rem;
+    min-width: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid var(--color-line);
+    background: var(--color-navy);
+    color: var(--color-gold);
+  }
+  .dial-wrap {
+    container-type: size;
+    display: grid;
+    min-height: 0;
+    flex: 1;
+    place-items: center;
+  }
+  .dial-slot {
+    position: relative;
+    width: min(100cqw, 100cqh);
+    aspect-ratio: 1;
+  }
+  .hub {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .sheet {
+    max-height: 46%;
+    overflow-y: auto;
+    flex-shrink: 0;
+    border-top: 1px solid var(--color-gold);
+    padding: 0.6rem 0.15rem 0;
+  }
+  .fine {
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+  .range {
+    width: 100%;
+    accent-color: var(--color-gold);
+    height: 2rem;
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-ink);
+    padding-top: env(safe-area-inset-top);
+  }
+}

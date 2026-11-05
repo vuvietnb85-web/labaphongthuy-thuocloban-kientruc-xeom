@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "La Bàn Phương Đông",
+      "hasCanvas": false,
+      "bodyTextLen": 745,
+      "bodyTextHash": "5b6592d5541b2936d5af20990996bf41ca8f8810b0c3e4a960f745f92cbb5412",
+      "bodyTextPrefix": "LA BÀN PHƯƠNG ĐÔNG 27 tháng 9 · Bính Ngọ La bàn Xây nhà Nội thất",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "La Bàn Phương Đông",
+      "hasCanvas": false,
+      "bodyTextLen": 745,
+      "bodyTextHash": "5b6592d5541b2936d5af20990996bf41ca8f8810b0c3e4a960f745f92cbb5412",
+      "bodyTextPrefix": "LA BÀN PHƯƠNG ĐÔNG 27 tháng 9 · Bính Ngọ La bàn Xây nhà Nội thất",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
