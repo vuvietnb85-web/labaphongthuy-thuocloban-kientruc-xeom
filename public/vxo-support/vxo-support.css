@@ -1,0 +1,24 @@
+/* VxO Support widget — ủng hộ tự nguyện. Nhẹ, không phụ thuộc thư viện. */
+.vxo-sp{--sp-bg:#11263d;--sp-fg:#ecf1f8;--sp-mute:#b8cadd;--sp-line:#2b4661;--sp-acc:#E8B00F;--sp-btn:#173456;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--sp-fg);background:var(--sp-bg);
+  border:1px solid var(--sp-line);border-radius:14px;padding:14px 16px;margin:16px auto;width:calc(100% - 32px);max-width:560px;line-height:1.5;text-align:left;box-sizing:border-box}
+.vxo-sp *{box-sizing:border-box}
+.vxo-sp h3{font-size:15px;margin:0 0 4px;color:var(--sp-fg)}
+.vxo-sp p{font-size:13px;margin:0 0 10px;color:var(--sp-mute)}
+.vxo-sp .sp-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.vxo-sp a.sp-btn,.vxo-sp button.sp-btn{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:8px 14px;border-radius:10px;
+  border:1px solid var(--sp-line);background:var(--sp-btn);color:var(--sp-fg);font:inherit;font-size:14px;text-decoration:none;cursor:pointer}
+.vxo-sp a.sp-btn.sp-kofi{background:#29abe0;border-color:#29abe0;color:#fff;font-weight:600}
+.vxo-sp a.sp-btn.sp-momo{background:#a50064;border-color:#a50064;color:#fff;font-weight:600}
+.vxo-sp a.sp-btn.sp-paypal{background:#ffc439;border-color:#ffc439;color:#111;font-weight:600}
+.vxo-sp .sp-num{font-variant-numeric:tabular-nums;font-weight:600;letter-spacing:.5px}
+.vxo-sp .sp-note{font-size:12px;color:var(--sp-mute);margin-top:8px}
+.vxo-sp .sp-status{font-size:12px;color:var(--sp-acc);min-height:1em;margin:4px 0 0}
+.vxo-sp a.sp-btn:focus-visible,.vxo-sp button.sp-btn:focus-visible,.vxo-sp-fab:focus-visible{outline:2px solid var(--sp-acc);outline-offset:2px}
+.vxo-sp[hidden]{display:none}
+/* Kiểu nút nổi (fab) cho app React */
+.vxo-sp-fab{position:fixed;right:14px;bottom:14px;z-index:2147483000;border:0;border-radius:999px;padding:10px 14px;background:#29abe0;color:#fff;
+  font:600 13px system-ui,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.3);cursor:pointer}
+.vxo-sp.sp-pop{position:fixed;right:14px;bottom:62px;z-index:2147483000;width:min(340px,calc(100vw - 28px));max-height:calc(100vh - 80px);overflow:auto;margin:0;box-shadow:0 8px 28px rgba(0,0,0,.4)}
+@media (prefers-color-scheme:light){.vxo-sp.sp-auto{--sp-bg:#fff;--sp-fg:#14202e;--sp-mute:#4a5a6c;--sp-line:#d6dee8;--sp-btn:#eef3f8;--sp-acc:#9a6b00}}
+@media (prefers-reduced-motion:no-preference){.vxo-sp a.sp-btn,.vxo-sp button.sp-btn{transition:filter .15s}.vxo-sp a.sp-btn:hover,.vxo-sp button.sp-btn:hover{filter:brightness(1.08)}}

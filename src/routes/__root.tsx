@@ -4,6 +4,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
 import { VxoBinanceRef } from "@/components/vxo-binance-ref";
+import { VxoSupport } from "@/components/vxo-support";
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -32,6 +33,7 @@ export const Route = createRootRoute({
           <Outlet />
         </AuthProvider>
         <VxoBinanceRef />
+        <VxoSupport />
         <Scripts />
       </body>
     </html>
